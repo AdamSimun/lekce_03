@@ -83,26 +83,13 @@ if not vybrana_sluzba in sluzby:
 else:
     print(oddelovac, 'Vybral jsi si službu: '.center(62), oddelovac, sep="\n")
 
-
-   
-## Výpis všech dostupných filmů #############################################
 if str(vybrana_sluzba) == sluzby[0]:
-    dostupne_filmy = list(filmy.keys())
-    print('V databázi jsou dostupné tyto filmy: '.center(62), f"| {' | '.join(dostupne_filmy)} |".center(62), oddelovac, sep="\n" )
+    print('V databázi jsou dostupné tyto filmy: ', list(filmy.keys()))
+
+## Výpis všech dostupných filmů #############################################
+
 ## Vyber film a zobraz detaily o něm ########################################
-elif str(vybrana_sluzba) == sluzby[1]:
-    vybrany_film = str(input("Vyber film: "))
-    pprint("Detaily vybraneho filmu: \n", filmy[vybrany_film].values)
+
 ## Vyber všechny režiséry ###################################################
-elif str(vybrana_sluzba) == sluzby[2]:
-    reziseri = (film_1["REZISER"].items, film_2["REZISER"].items, film_3["REZISER"].items, film_4["REZISER"].items)
-    print(reziseri)
+
 ## Doporuč film podle ostatních uživatelů ###################################
-else:
-    quit()
-
-    print("Ahoj")
-
-
-
-    print("Ahoj")
